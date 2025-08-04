@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TempMail Service</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/logo.png" alt="Logo" class="logo">
+            <h1>Servizio Email Temporanee</h1>
+        </header>
 
+        <main>
+            <section class="email-generator">
+                <button id="generate-btn" class="btn-primary">Genera Nuova Email</button>
+                <div id="email-display" class="hidden">
+                    <input type="text" id="email-addr" readonly>
+                    <button id="copy-btn" class="btn-secondary">Copia</button>
+                    <button id="delete-btn" class="btn-danger">Elimina</button>
+                </div>
+            </section>
+
+            <section class="inbox">
+                <h2>📨 Posta in Arrivo</h2>
+                <div id="loading-spinner" class="spinner hidden"></div>
+                <div id="email-list"></div>
+                <div id="error-message" class="error hidden"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 TempMail Service - <a href="/privacy">Privacy Policy</a></p>
+        </footer>
+    </div>
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
